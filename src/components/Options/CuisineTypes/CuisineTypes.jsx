@@ -9,16 +9,6 @@ const CuisineTypes = (props) => {
       handler: props.actionProvider.handleCuisineTypeChinese,
       id: 1,
     },
-    {
-      text: "Thai",
-      handler: props.actionProvider.handleCuisineTypeThai,
-      id: 2,
-    },
-    {
-      text: "Italian",
-      handler: props.actionProvider.handleCuisineTypeItalian,
-      id: 3,
-    },
   ];
 
   const buttonsMarkup = CuisineTypes.map((option) => (

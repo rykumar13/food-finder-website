@@ -12,12 +12,12 @@ const CategoryTypes = (props) => {
     {
       text: "Takeaway",
       handler: props.actionProvider.handleCategoryTypeTakeaway,
-      id: 1,
+      id: 2,
     },
     {
       text: "Dine-out",
       handler: props.actionProvider.handleCategoryTypeDineOut,
-      id: 1,
+      id: 3,
     },
   ];
 

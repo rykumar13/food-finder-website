@@ -10,7 +10,8 @@
     "react-chatbot-kit": "^1.1.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "zomato-api": "^0.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
   }
 }
