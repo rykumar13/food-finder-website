@@ -1,0 +1,15 @@
+.restaurant-widget {
+    color: black;
+}
+
+.restaurant-widget-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.restaurant-widget-list-item {
+    font-size: 1rem;
+    margin: 8px 0;
+    text-align: left;
+}

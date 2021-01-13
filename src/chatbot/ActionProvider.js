@@ -5,10 +5,25 @@ class ActionProvider {
     this.createClientMessage = createClientMessage;
   }
 
+  handleCuisineMatch = (cuisine) => {
+    const message = this.createChatBotMessage(
+      `handleCuisineMatch - ${cuisine}! not a bad choice.`,
+      {
+        widget: "categoryTypes",
+      }
+    );
+    console.log(cuisine);
+    this.addMessageToState(message);
+    this.setState((state) => ({
+      ...state,
+      cuisine: cuisine[0],
+    }));
+  };
+
   handleGetStartedBtn = () => {
     // Ask question
     const message = this.createChatBotMessage(
-      "What cuisine would you like to eat?"
+      "handleGetStartedBtn - What cuisine would you like to eat?"
     );
     this.addMessageToState(message);
 
@@ -25,26 +40,44 @@ class ActionProvider {
 
   handleCategoryTypeDelivery = () => {
     const message = this.createChatBotMessage(
-      "finding you a place, one moment..."
+      "handleCategoryTypeDelivery - finding you a place, one moment...",
+      {
+        widget: "restaurants",
+      }
+    );
+    this.setState((state) => ({
+      ...state,
+      categoryType: "Delivery",
+    }));
+    this.addMessageToState(message);
+  };
+
+  handleCategoryTypeTakeaway = (categoryType) => {
+    const message = this.createChatBotMessage(
+      "handleCategoryTypeTakeaway - You have chosen Takeaway!",
+      {
+        widget: "restaurant",
+      }
     );
     this.addMessageToState(message);
+    this.setState((state) => ({
+      ...state,
+      categoryType: "Takeaway",
+    }));
   };
 
-  handleCategoryTypeTakeaway = () => {
-    const message = this.createChatBotMessage("You have chosen Takeaway!");
+  handleCategoryTypeDineOut = (categoryType) => {
+    const message = this.createChatBotMessage(
+      "handleCategoryTypeDineOut - You have chosen Dine-Out!",
+      {
+        widget: "restaurant",
+      }
+    );
     this.addMessageToState(message);
-  };
-
-  handleCategoryTypeDineOut = () => {
-    const message = this.createChatBotMessage("You have chosen Dine-Out!");
-    this.addMessageToState(message);
-  };
-
-  handleCuisineType = () => {
-    const message = this.createChatBotMessage("Not a bad choice!", {
-      widget: "categoryTypes",
-    });
-    this.addMessageToState(message);
+    this.setState((state) => ({
+      ...state,
+      categoryType: "Dine-out",
+    }));
   };
 
   todosHandler = () => {
