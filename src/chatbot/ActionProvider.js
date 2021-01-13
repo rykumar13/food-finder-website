@@ -5,18 +5,17 @@ class ActionProvider {
     this.createClientMessage = createClientMessage;
   }
 
-  handleCuisineMatch = (cuisine) => {
+  handleCuisineMatch = (cuisineId) => {
     const message = this.createChatBotMessage(
-      `handleCuisineMatch - ${cuisine}! not a bad choice.`,
+      `handleCuisineMatch - ${cuisineId}! not a bad choice.`,
       {
         widget: "categoryTypes",
       }
     );
-    console.log(cuisine);
     this.addMessageToState(message);
     this.setState((state) => ({
       ...state,
-      cuisine: cuisine[0],
+      cuisineType: cuisineId,
     }));
   };
 

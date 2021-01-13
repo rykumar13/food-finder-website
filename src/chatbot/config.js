@@ -21,7 +21,7 @@ const config = {
     {
         widgetName: "CuisineTypes",
         widgetFunc: (props) => <CuisineTypes {...props} />,
-        mapStateToProps: ["cuisine"]
+        mapStateToProps: ["cuisineTypes"]
       },
     {
       widgetName: "GetStartedBtn",
@@ -36,7 +36,11 @@ const config = {
     {
       widgetName: "restaurants",
       widgetFunc: (props) => <Restaurant {...props} />,
-      mapStateToProps: ["restaurants"]
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType"
+      ]
     },
     {
       widgetName: "todos",
@@ -46,7 +50,7 @@ const config = {
   ],
   state: {
     todos: [],
-    cuisine: "",
+    cuisineType: "",
     categoryType: "",
     restaurants: [],
   }
