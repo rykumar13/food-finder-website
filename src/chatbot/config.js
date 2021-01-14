@@ -39,7 +39,9 @@ const config = {
       mapStateToProps: [
         "restaurants",
         "cuisineType",
-        "categoryType"
+        "categoryType",
+        "latitude",
+        "longitude"
       ]
     },
     {
@@ -53,6 +55,8 @@ const config = {
     cuisineType: "",
     categoryType: "",
     restaurants: [],
+    latitude: -36.8483, 
+    longitude: 174.7626
   }
 };
 

@@ -2,16 +2,30 @@ import React, { useEffect } from "react";
 
 import "./Restaurant.css";
 
-const Restaurant = (
-  {
-    cuisineType, 
-    categoryType, 
-    restaurants,
+const Restaurant = ({
+  cuisineType,
+  categoryType,
+  latitude,
+  longitude,
+  restaurants,
+}) => {
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((res) => res.json())
+      .then((data) => {
+        const fiveFirstTodos = data.slice(0, 6);
+        setState((state) => ({ ...state, todos: fiveFirstTodos }));
+      });
+  }, []);
 
-  }) => {
+  useEffect(() => {
+    
+  }, []);
 
   console.log(cuisineType);
   console.log(categoryType);
+  console.log(latitude);
+  console.log(longitude);
 
   const renderRestaurant = () => {
     return restaurants.map((restaurant) => {
