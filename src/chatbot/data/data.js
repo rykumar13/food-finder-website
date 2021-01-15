@@ -1,11 +1,6 @@
 const baseURL = "https://developers.zomato.com/api/v2.1/";
 
-const getRestaurants = async (
-  cuisineType,
-  categoryType,
-  latitude,
-  longitude
-) => {
+export const getRestaurants = async (cuisineType, categoryType, latitude, longitude) => {
   let data = await fetch(
     `${baseURL}search?q=${categoryType}&count=5&lat=${latitude}&lon=${longitude}&cuisines=${cuisineType}`,
     {
@@ -17,6 +12,13 @@ const getRestaurants = async (
     }
   );
   data = await data.json();
-  console.log(data.restaurants[0])
-  return data;
+  const restaurantNames = [
+    data.restaurants[0]["restaurant"]["name"], 
+    data.restaurants[1]["restaurant"]["name"], 
+    data.restaurants[2]["restaurant"]["name"],
+    data.restaurants[3]["restaurant"]["name"],
+    data.restaurants[4]["restaurant"]["name"]
+  ];
+  console.log(restaurantNames);
+  return restaurantNames;
 };

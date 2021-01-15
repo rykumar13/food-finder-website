@@ -4,7 +4,7 @@ import { createChatBotMessage } from "react-chatbot-kit";
 import GetStartedBtn from "../components/Options/GetStartedBtn/GetStartedBtn";
 import CategoryTypes from "../components/Options/CategoryTypes/CategoryTypes";
 import CuisineTypes from "../components/Options/CuisineTypes/CuisineTypes";
-import Restaurant from "../components/Restaurant/Restaurant";
+import Restaurants from "../components/Restaurants/Restaurants";
 import Todos from "../components/Todos/Todos";
 
 const config = {
@@ -35,7 +35,7 @@ const config = {
     },
     {
       widgetName: "restaurants",
-      widgetFunc: (props) => <Restaurant {...props} />,
+      widgetFunc: (props) => <Restaurants {...props} />,
       mapStateToProps: [
         "restaurants",
         "cuisineType",
