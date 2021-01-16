@@ -5,13 +5,57 @@ class ActionProvider {
     this.createClientMessage = createClientMessage;
   }
 
-  handleSkipBtn = () => {
+  handleSkipBtn1 = () => {
     const message1 = this.createChatBotMessage("How about...", {
-      widget: "restaurants",
+      widget: "Restaurant2",
     });
     this.addMessageToState(message1);
     const message2 = this.createChatBotMessage("another suggestions?", {
-      widget: "MenuSkipBtns",
+      widget: "MenuSkipBtns2",
+    });
+    this.addMessageToState(message2);
+  };
+
+  handleSkipBtn2 = () => {
+    const message1 = this.createChatBotMessage("How about...", {
+      widget: "Restaurant3",
+    });
+    this.addMessageToState(message1);
+    const message2 = this.createChatBotMessage("another suggestions?", {
+      widget: "MenuSkipBtns3",
+    });
+    this.addMessageToState(message2);
+  };
+
+  handleSkipBtn3 = () => {
+    const message1 = this.createChatBotMessage("How about...", {
+      widget: "Restaurant4",
+    });
+    this.addMessageToState(message1);
+    const message2 = this.createChatBotMessage("another suggestions?", {
+      widget: "MenuSkipBtns4",
+    });
+    this.addMessageToState(message2);
+  };
+
+  handleSkipBtn4 = () => {
+    const message1 = this.createChatBotMessage("How about...", {
+      widget: "Restaurant5",
+    });
+    this.addMessageToState(message1);
+    const message2 = this.createChatBotMessage("another suggestions?", {
+      widget: "MenuSkipBtns5",
+    });
+    this.addMessageToState(message2);
+  };
+
+  handleSkipBtn5 = () => {
+    const message1 = this.createChatBotMessage("How about...", {
+      widget: "Restaurant1",
+    });
+    this.addMessageToState(message1);
+    const message2 = this.createChatBotMessage("another suggestions?", {
+      widget: "MenuSkipBtns1",
     });
     this.addMessageToState(message2);
   };
@@ -42,7 +86,7 @@ class ActionProvider {
     const message1 = this.createChatBotMessage(
       "finding you a place, one moment...",
       {
-        widget: "restaurants",
+        widget: "Restaurant1",
       }
     );
     this.setState((state) => ({
@@ -52,7 +96,7 @@ class ActionProvider {
     this.addMessageToState(message1);
 
     const message2 = this.createChatBotMessage("another suggestions?", {
-      widget: "MenuSkipBtns",
+      widget: "MenuSkipBtns1",
     });
     this.addMessageToState(message2);
   };
@@ -61,7 +105,7 @@ class ActionProvider {
     const message = this.createChatBotMessage(
       "handleCategoryTypeTakeaway - You have chosen Takeaway!",
       {
-        widget: "restaurant",
+        widget: "Restaurant1",
       }
     );
     this.addMessageToState(message);
@@ -75,7 +119,7 @@ class ActionProvider {
     const message = this.createChatBotMessage(
       "handleCategoryTypeDineOut - You have chosen Dine-Out!",
       {
-        widget: "restaurant",
+        widget: "Restaurant1",
       }
     );
     this.addMessageToState(message);

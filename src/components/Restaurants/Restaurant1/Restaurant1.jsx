@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-import "./Restaurants.css";
+import "./Restaurant1.css";
 
-import { getRestaurants } from "../../chatbot/data/data";
+import { getRestaurants } from "../../../chatbot/data/data";
 
-const Restaurant = ({ cuisineType, categoryType, latitude, longitude, count }) => {
+const Restaurant1 = ({ cuisineType, categoryType, latitude, longitude }) => {
   const [currentRestaurant, setCurrentRestaurant] = useState(null);
 
   useEffect(() => {
-    const getRestaurantss = async () => {
+    const getRestaurantsList = async () => {
       let restaurantList = await getRestaurants(
         cuisineType,
         categoryType,
@@ -18,13 +18,13 @@ const Restaurant = ({ cuisineType, categoryType, latitude, longitude, count }) =
       if (restaurantList) return setCurrentRestaurant(restaurantList);
       setCurrentRestaurant("no restaurants found");
     };
-    getRestaurantss();
+    getRestaurantsList();
   }, [cuisineType, categoryType, latitude, longitude]);
 
   const renderRestaurant = () => {
     return (
       <li className="restaurant-widget-list-item" key={1}>
-        {currentRestaurant[count]}
+        {currentRestaurant[0]}
       </li>
     );
   };
@@ -38,4 +38,4 @@ const Restaurant = ({ cuisineType, categoryType, latitude, longitude, count }) =
   );
 };
 
-export default Restaurant;
+export default Restaurant1;

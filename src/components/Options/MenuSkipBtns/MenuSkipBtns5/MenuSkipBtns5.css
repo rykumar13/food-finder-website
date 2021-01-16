@@ -1,9 +1,9 @@
-.SkipBtn-container {
+.MenuSkipBtns5-container {
     display: flex;
     flex-wrap: wrap;
   }
   
-  .SkipBtn-button {
+  .MenuSkipBtns5-button {
     margin: 5px;
     border-radius: 25px;
     padding: 8px;
