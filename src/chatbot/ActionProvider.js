@@ -5,6 +5,17 @@ class ActionProvider {
     this.createClientMessage = createClientMessage;
   }
 
+  handleSkipBtn = () => {
+    const message1 = this.createChatBotMessage("How about...", {
+      widget: "restaurants",
+    });
+    this.addMessageToState(message1);
+    const message2 = this.createChatBotMessage("another suggestions?", {
+      widget: "MenuSkipBtns",
+    });
+    this.addMessageToState(message2);
+  };
+
   handleCuisineMatch = (cuisineId) => {
     const message = this.createChatBotMessage(
       `handleCuisineMatch - ${cuisineId}! not a bad choice.`,
@@ -25,21 +36,11 @@ class ActionProvider {
       "handleGetStartedBtn - What cuisine would you like to eat?"
     );
     this.addMessageToState(message);
-
-    //Retrieve cuisine list
-    var zomato = require("zomato-api");
-    var client = zomato({
-      userKey: "443cebb0c149559671b6093778226894",
-    });
-    client
-      .getCuisines({ city_id: 70 })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
   };
 
   handleCategoryTypeDelivery = () => {
-    const message = this.createChatBotMessage(
-      "handleCategoryTypeDelivery - finding you a place, one moment...",
+    const message1 = this.createChatBotMessage(
+      "finding you a place, one moment...",
       {
         widget: "restaurants",
       }
@@ -48,7 +49,12 @@ class ActionProvider {
       ...state,
       categoryType: "Delivery",
     }));
-    this.addMessageToState(message);
+    this.addMessageToState(message1);
+
+    const message2 = this.createChatBotMessage("another suggestions?", {
+      widget: "MenuSkipBtns",
+    });
+    this.addMessageToState(message2);
   };
 
   handleCategoryTypeTakeaway = (categoryType) => {

@@ -5,6 +5,9 @@ import GetStartedBtn from "../components/Options/GetStartedBtn/GetStartedBtn";
 import CategoryTypes from "../components/Options/CategoryTypes/CategoryTypes";
 import CuisineTypes from "../components/Options/CuisineTypes/CuisineTypes";
 import Restaurants from "../components/Restaurants/Restaurants";
+import MenuSkipBtns from "../components/Options/MenuSkipBtns/MenuSkipBtns";
+
+
 import Todos from "../components/Todos/Todos";
 
 const config = {
@@ -18,6 +21,11 @@ const config = {
     ),
   ],
   widgets: [
+    {
+      widgetName: "MenuSkipBtns",
+      widgetFunc: (props) => <MenuSkipBtns {...props} />,
+      mapStateToProps: ["count"]
+    },
     {
         widgetName: "CuisineTypes",
         widgetFunc: (props) => <CuisineTypes {...props} />,
@@ -41,7 +49,8 @@ const config = {
         "cuisineType",
         "categoryType",
         "latitude",
-        "longitude"
+        "longitude",
+        "count"
       ]
     },
     {
@@ -56,7 +65,8 @@ const config = {
     categoryType: "",
     restaurants: [],
     latitude: -36.8483, 
-    longitude: 174.7626
+    longitude: 174.7626,
+    count: 0
   }
 };
 

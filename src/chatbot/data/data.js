@@ -1,6 +1,11 @@
 const baseURL = "https://developers.zomato.com/api/v2.1/";
 
-export const getRestaurants = async (cuisineType, categoryType, latitude, longitude) => {
+export const getRestaurants = async (
+  cuisineType,
+  categoryType,
+  latitude,
+  longitude
+) => {
   let data = await fetch(
     `${baseURL}search?q=${categoryType}&count=5&lat=${latitude}&lon=${longitude}&cuisines=${cuisineType}`,
     {
@@ -12,13 +17,22 @@ export const getRestaurants = async (cuisineType, categoryType, latitude, longit
     }
   );
   data = await data.json();
-  const restaurantNames = [
-    data.restaurants[0]["restaurant"]["name"], 
-    data.restaurants[1]["restaurant"]["name"], 
-    data.restaurants[2]["restaurant"]["name"],
-    data.restaurants[3]["restaurant"]["name"],
-    data.restaurants[4]["restaurant"]["name"]
-  ];
+  // const restaurantNames = [
+  //   data.restaurants[0]["restaurant"]["name"],
+  //   data.restaurants[1]["restaurant"]["name"],
+  //   data.restaurants[2]["restaurant"]["name"],
+  //   data.restaurants[3]["restaurant"]["name"],
+  //   data.restaurants[4]["restaurant"]["name"]
+  // ];
+
+  const restaurantNames = new Array(
+    "Tucks and Bao - Newmarket",
+    "Wok' n Noodle Bar",
+    "Pokpok",
+    "Krung Thep Thai Street Food",
+    "Nickie's Thai Restaurant",
+  );
+
   console.log(restaurantNames);
   return restaurantNames;
 };
