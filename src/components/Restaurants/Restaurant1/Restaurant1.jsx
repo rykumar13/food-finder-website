@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import "./Restaurant1.css";
 
-import { getRestaurants } from "../../../chatbot/data/data";
+//import { getRestaurants } from "../../../chatbot/data/data";
+import { getRestaurants } from "../../../chatbot/data/mock_response";
 
 const Restaurant1 = ({ cuisineType, categoryType, latitude, longitude }) => {
   const [currentRestaurant, setCurrentRestaurant] = useState(null);
@@ -23,9 +24,16 @@ const Restaurant1 = ({ cuisineType, categoryType, latitude, longitude }) => {
 
   const renderRestaurant = () => {
     return (
-      <li className="restaurant-widget-list-item" key={1}>
-        {currentRestaurant[0]}
-      </li>
+      <p className="restaurant-widget-list-item" key={1}>
+        {currentRestaurant[0]["restaurant"]["name"]}
+        <br></br>
+        {currentRestaurant[0]["restaurant"]["location"]["address"] +
+          ", " +
+          currentRestaurant[0]["restaurant"]["location"]["locality"]}
+        <br></br>
+        {"This place has a rating of "}
+        {currentRestaurant[0]["restaurant"]["user_rating"]["aggregate_rating"]}
+      </p>
     );
   };
 
