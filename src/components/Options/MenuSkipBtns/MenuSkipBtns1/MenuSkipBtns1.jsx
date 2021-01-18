@@ -14,6 +14,16 @@ const MenuSkipBtns1 = (props) => {
       handler: props.actionProvider.handleSkipBtn1,
       id: 2,
     },
+    {
+      text: "Opening Hours",
+      handler: props.actionProvider.handleOpeningHrsBtn1,
+      id: 3,
+    },
+  {
+    text: "Contact",
+    handler: props.actionProvider.handleContactDetailsBtn1,
+    id: 4,
+  },
   ];
 
   const buttonsMarkup = MenuSkipBtns1.map((option) => (

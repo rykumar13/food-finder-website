@@ -6,14 +6,13 @@ class MessageParser {
 
   parse(message) {
     const lowercase = message.toLowerCase();
-
+    
     if (this.findCuisineId(lowercase)) {
-      this.actionProvider.handleCuisineMatch(this.findCuisineId(lowercase));
+      this.actionProvider.handleCuisineMatch(lowercase, this.findCuisineId(lowercase));
+    } else {
+      this.actionProvider.unhandledInput();
     }
 
-    if (lowercase.includes("todos")) {
-      this.actionProvider.todosHandler();
-    }
   }
 
   findCuisineId = (lowercase) => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { getRestaurants } from "../../../chatbot/data/mock_response";
+import { getRestaurants } from "../../../chatbot/data/data";
 
 import "./OpeningHours1.css";
 
@@ -15,7 +15,7 @@ const OpeningHours1 = ({ cuisineType, categoryType, latitude, longitude }) => {
         latitude,
         longitude
       );
-      if (restaurantList) return setOpeningHours1(restaurantList[0]["restaurant"]["timings"]);
+      if (restaurantList) return setOpeningHours1(restaurantList);
       setOpeningHours1("sorry, no OpeningHours1 available.");
     };
     getOpeningHours1();
@@ -24,7 +24,7 @@ const OpeningHours1 = ({ cuisineType, categoryType, latitude, longitude }) => {
   const renderOpeningHours1 = () => {
     return (
       <p className="OpeningHours1-widget-list-item" key={1}>
-        {OpeningHours1}
+        {OpeningHours1[0]["restaurant"]["timings"]}
       </p>
     );
   };

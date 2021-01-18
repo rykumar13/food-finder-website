@@ -5,15 +5,25 @@ import "./MenuSkipBtns3.css";
 const MenuSkipBtns3 = (props) => {
   const MenuSkipBtns3 = [
     {
-        text: "See Menu",
-        handler: props.actionProvider.handleMenuBtn3,
-        id: 1,
-      },
-    {
-      text: "Next Suggestion",
-      handler: props.actionProvider.handleSkipBtn3,
-      id: 2,
+      text: "See Menu",
+      handler: props.actionProvider.handleMenuBtn3,
+      id: 1,
     },
+  {
+    text: "Next Suggestion",
+    handler: props.actionProvider.handleSkipBtn3,
+    id: 2,
+  },
+  {
+    text: "Opening Hours",
+    handler: props.actionProvider.handleOpeningHrsBtn3,
+    id: 3,
+  },
+{
+  text: "Contact",
+  handler: props.actionProvider.handleContactDetailsBtn3,
+  id: 4,
+},
   ];
 
   const buttonsMarkup = MenuSkipBtns3.map((option) => (

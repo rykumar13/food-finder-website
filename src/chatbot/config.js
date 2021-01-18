@@ -23,12 +23,6 @@ import Menu3 from "../components/Menu/Menu3/Menu3.jsx"
 import Menu4 from "../components/Menu/Menu4/Menu4.jsx"
 import Menu5 from "../components/Menu/Menu5/Menu5.jsx"
 
-import ContactHrsBtns1 from "../components/Options/ContactHrsBtns/ContactHrsBtns1/ContactHrsBtns1"
-import ContactHrsBtns2 from "../components/Options/ContactHrsBtns/ContactHrsBtns2/ContactHrsBtns2"
-import ContactHrsBtns3 from "../components/Options/ContactHrsBtns/ContactHrsBtns3/ContactHrsBtns3"
-import ContactHrsBtns4 from "../components/Options/ContactHrsBtns/ContactHrsBtns4/ContactHrsBtns4"
-import ContactHrsBtns5 from "../components/Options/ContactHrsBtns/ContactHrsBtns5/ContactHrsBtns5"
-
 import OpeningHours1 from "../components/OpeningHours/OpeningHours1/OpeningHours1"
 import OpeningHours2 from "../components/OpeningHours/OpeningHours2/OpeningHours2"
 import OpeningHours3 from "../components/OpeningHours/OpeningHours3/OpeningHours3"
@@ -47,8 +41,6 @@ import NextRestartBtns3 from "../components/Options/NextRestartBtns/NextRestartB
 import NextRestartBtns4 from "../components/Options/NextRestartBtns/NextRestartBtns4/NextRestartBtns4"
 import NextRestartBtns5 from "../components/Options/NextRestartBtns/NextRestartBtns5/NextRestartBtns5"
 
-import Todos from "../components/Todos/Todos";
-
 const config = {
   botName: "FoodBot",
   initialMessages: [
@@ -63,62 +55,112 @@ const config = {
     {
       widgetName: "OpeningHours5",
       widgetFunc: (props) => <OpeningHours5 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "OpeningHours4",
       widgetFunc: (props) => <OpeningHours4 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "OpeningHours3",
       widgetFunc: (props) => <OpeningHours3 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "OpeningHours2",
       widgetFunc: (props) => <OpeningHours2 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "OpeningHours1",
       widgetFunc: (props) => <OpeningHours1 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "ContactDetails5",
       widgetFunc: (props) => <ContactDetails5 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "ContactDetails4",
       widgetFunc: (props) => <ContactDetails4 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "ContactDetails3",
       widgetFunc: (props) => <ContactDetails3 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "ContactDetails2",
       widgetFunc: (props) => <ContactDetails2 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "ContactDetails1",
       widgetFunc: (props) => <ContactDetails1 {...props} />,
-    },
-    {
-      widgetName: "ContactHrsBtns5",
-      widgetFunc: (props) => <ContactHrsBtns5 {...props} />,
-    },
-    {
-      widgetName: "ContactHrsBtns4",
-      widgetFunc: (props) => <ContactHrsBtns4 {...props} />,
-    },
-    {
-      widgetName: "ContactHrsBtns3",
-      widgetFunc: (props) => <ContactHrsBtns3 {...props} />,
-    },
-    {
-      widgetName: "ContactHrsBtns2",
-      widgetFunc: (props) => <ContactHrsBtns2 {...props} />,
-    },
-    {
-      widgetName: "ContactHrsBtns1",
-      widgetFunc: (props) => <ContactHrsBtns1 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "NextRestartBtns5",
@@ -143,22 +185,57 @@ const config = {
     {
       widgetName: "Menu5",
       widgetFunc: (props) => <Menu5 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "Menu4",
       widgetFunc: (props) => <Menu4 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "Menu3",
       widgetFunc: (props) => <Menu3 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "Menu2",
       widgetFunc: (props) => <Menu2 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "Menu1",
       widgetFunc: (props) => <Menu1 {...props} />,
+      mapStateToProps: [
+        "restaurants",
+        "cuisineType",
+        "categoryType",
+        "latitude",
+        "longitude",
+      ]
     },
     {
       widgetName: "MenuSkipBtns1",
@@ -251,14 +328,8 @@ const config = {
         "longitude",
       ]
     },
-    {
-      widgetName: "todos",
-      widgetFunc: (props) => <Todos {...props} />,
-      mapStateToProps: ["todos"]
-    },
   ],
   state: {
-    todos: [],
     cuisineType: "",
     categoryType: "",
     restaurants: [],

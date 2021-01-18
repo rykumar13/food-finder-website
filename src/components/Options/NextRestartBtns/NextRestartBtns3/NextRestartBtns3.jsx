@@ -5,14 +5,9 @@ import "./NextRestartBtns3.css";
 const NextRestartBtns3 = (props) => {
   const NextRestartBtns3 = [
     {
-        text: "Next Suggestion",
-        handler: props.actionProvider.handleSkipBtn3,
-        id: 1,
-      },
-    {
       text: "Restart",
       handler: props.actionProvider.handleGetStartedBtn,
-      id: 2,
+      id: 1,
     },
   ];
 

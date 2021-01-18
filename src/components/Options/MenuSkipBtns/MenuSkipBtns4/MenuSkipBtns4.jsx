@@ -5,15 +5,25 @@ import "./MenuSkipBtns4.css";
 const MenuSkipBtns4 = (props) => {
   const MenuSkipBtns4 = [
     {
-        text: "See Menu",
-        handler: props.actionProvider.handleMenuBtn4,
-        id: 1,
-      },
-    {
-      text: "Next Suggestion",
-      handler: props.actionProvider.handleSkipBtn4,
-      id: 2,
+      text: "See Menu",
+      handler: props.actionProvider.handleMenuBtn4,
+      id: 1,
     },
+  {
+    text: "Next Suggestion",
+    handler: props.actionProvider.handleSkipBtn4,
+    id: 2,
+  },
+  {
+    text: "Opening Hours",
+    handler: props.actionProvider.handleOpeningHrsBtn4,
+    id: 3,
+  },
+{
+  text: "Contact",
+  handler: props.actionProvider.handleContactDetailsBtn4,
+  id: 4,
+},
   ];
 
   const buttonsMarkup = MenuSkipBtns4.map((option) => (

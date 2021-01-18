@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-import { getRestaurants } from "../../../chatbot/data/mock_response";
+import { getRestaurants } from "../../../chatbot/data/data";
+//import { getRestaurants } from "../../../chatbot/data/mock_response";
 
 import "./Menu.css";
 
 const Menu1 = ({ cuisineType, categoryType, latitude, longitude }) => {
   const [menu, setMenu] = useState(null);
-
   useEffect(() => {
     const getMenu = async () => {
       let restaurantList = await getRestaurants(
@@ -15,7 +15,7 @@ const Menu1 = ({ cuisineType, categoryType, latitude, longitude }) => {
         latitude,
         longitude
       );
-      if (restaurantList) return setMenu(restaurantList[0]["restaurant"]["menu_url"]);
+      if (restaurantList) return setMenu(restaurantList);
       setMenu("sorry, no menu available.");
     };
     getMenu();
@@ -24,7 +24,7 @@ const Menu1 = ({ cuisineType, categoryType, latitude, longitude }) => {
   const renderMenu = () => {
     return (
       <p className="menu-widget-list-item" key={1}>
-        {menu}
+        {menu[0]["restaurant"]["menu_url"]}
       </p>
     );
   };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { getRestaurants } from "../../../chatbot/data/mock_response";
+import { getRestaurants } from "../../../chatbot/data/data";
 
 import "./ContactDetails3.css";
 
@@ -15,7 +15,7 @@ const ContactDetails3 = ({ cuisineType, categoryType, latitude, longitude }) => 
         latitude,
         longitude
       );
-      if (restaurantList) return setContactDetails3(restaurantList[2]["restaurant"]["phone_numbers"]);
+      if (restaurantList) return setContactDetails3(restaurantList);
       setContactDetails3("sorry, no ContactDetails3 available.");
     };
     getContactDetails3();
@@ -24,7 +24,7 @@ const ContactDetails3 = ({ cuisineType, categoryType, latitude, longitude }) => 
   const renderContactDetails3 = () => {
     return (
       <p className="ContactDetails3-widget-list-item" key={1}>
-        {ContactDetails3}
+        {ContactDetails3[2]["restaurant"]["phone_numbers"]}
       </p>
     );
   };
